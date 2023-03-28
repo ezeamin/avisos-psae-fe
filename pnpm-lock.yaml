@@ -12,6 +12,7 @@ specifiers:
   react: ^18.2.0
   react-dom: ^18.2.0
   react-markdown: ^8.0.6
+  rehype-sanitize: ^5.0.1
   remark-gfm: ^3.0.1
   sweetalert2: ^11.7.3
   typescript: ^4.9.3
@@ -26,6 +27,7 @@ dependencies:
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   react-markdown: 8.0.6_2thlp7g7odiqm7dwhn3rlhxaa4
+  rehype-sanitize: 5.0.1
   remark-gfm: 3.0.1
   sweetalert2: 11.7.3
 
@@ -1089,6 +1091,12 @@ packages:
       zwitch: 2.0.4
     dev: false
 
+  /hast-util-sanitize/4.1.0:
+    resolution: {integrity: sha512-Hd9tU0ltknMGRDv+d6Ro/4XKzBqQnP/EZrpiTbpFYfXv/uOhWeKc+2uajcbEvAEH98VZd7eII2PiXm13RihnLw==}
+    dependencies:
+      '@types/hast': 2.3.4
+    dev: false
+
   /hast-util-select/5.0.5:
     resolution: {integrity: sha512-QQhWMhgTFRhCaQdgTKzZ5g31GLQ9qRb1hZtDPMqQaOhpLBziWcshUS0uCR5IJ0U1jrK/mxg35fmcq+Dp/Cy2Aw==}
     dependencies:
@@ -1872,6 +1880,14 @@ packages:
       hast-util-select: 5.0.5
       unified: 10.1.2
       unist-util-visit: 4.1.2
+    dev: false
+
+  /rehype-sanitize/5.0.1:
+    resolution: {integrity: sha512-da/jIOjq8eYt/1r9GN6GwxIR3gde7OZ+WV8pheu1tL8K0D9KxM2AyMh+UEfke+FfdM3PvGHeYJU0Td5OWa7L5A==}
+    dependencies:
+      '@types/hast': 2.3.4
+      hast-util-sanitize: 4.1.0
+      unified: 10.1.2
     dev: false
 
   /rehype-slug/5.1.0:

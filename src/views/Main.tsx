@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { Alert, Divider } from '@mui/material';
 
 import MDEditor from '@uiw/react-md-editor';
+import rehypeSanitize from 'rehype-sanitize';
 
 import ButtonsSection from '../components/ButtonsSection/ButtonsSection';
 import Statistics from '../components/Statistics/Statistics';
@@ -46,7 +47,8 @@ const Main = () => {
         escribiendo.
         <br />
         <br /> Recuerde que puede utilizar los iconos superiores del campo para
-        aplicarle formato a su aviso.
+        aplicarle formato a su aviso. Puede agrandar el editor desde el margen
+        inferior derecho del mismo.
       </Alert>
       <Alert
         severity='warning'
@@ -64,6 +66,10 @@ const Main = () => {
         onChange={(text) => setText(text)}
         className='animate-in-bottom-short'
         style={{ animationDelay: '400ms' }}
+        height={250}
+        previewOptions={{
+          rehypePlugins: [[rehypeSanitize]],
+        }}
       />
 
       <ButtonsSection saveAndAlert={saveAndAlert} clear={clear} />
