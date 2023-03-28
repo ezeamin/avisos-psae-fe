@@ -47,7 +47,7 @@ const Statistics = () => {
           className='animate-in-bottom-short'
           sx={{ animationDelay: '1500ms' }}
         >
-          El aviso que se encuentra actualmente subido fue visualizado por{' '}
+          El aviso que se encuentra actualmente activo fue visualizado por{' '}
           <strong>{viewedBy}</strong> de <strong>{totalUsers}</strong> usuarios
           ({percentage}%).{' '}
         </Typography>

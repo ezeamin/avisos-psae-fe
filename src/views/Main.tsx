@@ -35,7 +35,11 @@ const Main = () => {
 
   return (
     <>
-      <Alert severity='info' sx={{ mb: 2 }} className='animate-in-bottom-short'>
+      <Alert
+        severity='info'
+        sx={{ mb: 2, mt: 1 }}
+        className='animate-in-bottom-short'
+      >
         <strong>Bienvenido.</strong> Para emitir un aviso a la plataforma, por
         favor utilice el campo de texto situado a la izquierda debajo de este
         mensaje. El campo derecho será para visualizacion de lo que usted esté
@@ -50,7 +54,9 @@ const Main = () => {
         className='animate-in-bottom-short'
       >
         Realizar un nuevo aviso implicará eliminar el existente (de haberlo),
-        por lo que quienes no hayan visto el aviso anterior, no podrán verlo. Esto es automático al guardar el nuevo aviso, por lo que no necesita borrar el existente antes de guardar el nuevo.
+        por lo que quienes no hayan visto el aviso anterior, no podrán verlo.
+        Esto es automático al guardar el nuevo aviso, por lo que no necesita
+        borrar el existente antes de guardar el nuevo.
       </Alert>
 
       <MDEditor
