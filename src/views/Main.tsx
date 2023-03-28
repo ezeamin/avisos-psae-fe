@@ -50,7 +50,7 @@ const Main = () => {
         className='animate-in-bottom-short'
       >
         Realizar un nuevo aviso implicará eliminar el existente (de haberlo),
-        por lo que quienes no hayan visto el aviso anterior, no podrán verlo.
+        por lo que quienes no hayan visto el aviso anterior, no podrán verlo. Esto es automático al guardar el nuevo aviso, por lo que no necesita borrar el existente antes de guardar el nuevo.
       </Alert>
 
       <MDEditor

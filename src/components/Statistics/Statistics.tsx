@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { Stack, Typography } from '@mui/material';
 
+import { customSwal } from '../../helpers/customSwal';
+
 import { RoundedButton } from '../../styled';
 
 import AlertDialog from '../AlertDialog/AlertDialog';
@@ -15,6 +17,21 @@ const Statistics = () => {
   const handleViewAlert = () => {
     setOpenAlert(true);
   };
+
+  const handleDeleteAlert = () => {
+    customSwal({
+        title: 'Atención',
+        text: 'Esta acción dará de baja el aviso actual, y ningún usuario podrá visualizarlo. ¿Desea continuar?',
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: 'Si, eliminar aviso',
+      }).then((result) => {
+        if (!result.isConfirmed) return;
+  
+        //   delete alert and remove this section from DOM
+        
+      });
+  }
 
   const handleCloseViewAlert = () => {
     setOpenAlert(false);
@@ -34,14 +51,25 @@ const Statistics = () => {
           <strong>{viewedBy}</strong> de <strong>{totalUsers}</strong> usuarios
           ({percentage}%).{' '}
         </Typography>
-        <RoundedButton
-          variant='outlined'
-          sx={{ my: 2, animationDelay: '1700ms' }}
-          onClick={handleViewAlert}
-          className='animate-in-bottom-short'
-        >
-          Ver aviso
-        </RoundedButton>
+        <Stack direction='row' gap={2}>
+          <RoundedButton
+            variant='outlined'
+            sx={{ my: 2, animationDelay: '1700ms' }}
+            onClick={handleViewAlert}
+            className='animate-in-bottom-short'
+          >
+            Ver aviso
+          </RoundedButton>
+          <RoundedButton
+            variant='outlined'
+            sx={{ my: 2, animationDelay: '1900ms' }}
+            onClick={handleDeleteAlert}
+            className='animate-in-bottom-short'
+            color='error'
+          >
+            Dar de baja aviso
+          </RoundedButton>
+        </Stack>
       </Stack>
 
       <AlertDialog opened={openAlert} handleClose={handleCloseViewAlert} />
