@@ -14,5 +14,6 @@ export const DTI_LIST = {
     CLEAR_FORM: 'clear-form-button',
   },
   ACTIONS: {
+    CLOSE: 'close',
   },
 };

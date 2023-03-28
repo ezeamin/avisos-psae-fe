@@ -3,17 +3,17 @@
   "name": "Avisos Portal del SAE",
   "icons": [
     {
-      "src": "/assets/img/logo-24.png",
+      "src": "/img/logo-24.png",
       "sizes": "24x24",
       "type": "image/png"
     },
     {
-      "src": "/assets/img/logos/logo-72.png",
+      "src": "/img/logos/logo-72.png",
       "sizes": "72x72",
       "type": "image/png"
     },
     {
-      "src": "/assets/img/logos/logo-144.png",
+      "src": "/img/logos/logo-144.png",
       "sizes": "144x144",
       "type": "image/png"
     }
