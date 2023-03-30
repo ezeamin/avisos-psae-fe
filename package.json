@@ -1,5 +1,5 @@
 {
-  "name": "avisos-psae-v2",
+  "name": "test-01",
   "private": true,
   "version": "0.0.1",
   "type": "module",
@@ -17,9 +17,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-markdown": "^8.0.6",
-    "rehype-sanitize": "^5.0.1",
-    "remark-gfm": "^3.0.1",
-    "sweetalert2": "^11.7.3"
+    "rehype-sanitize": "^5.0.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
