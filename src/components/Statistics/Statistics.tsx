@@ -11,6 +11,8 @@ const viewedBy = 1665;
 const totalUsers = 4122;
 const percentage = ((viewedBy / totalUsers) * 100).toFixed(1);
 
+const isThereCurrentAlert = true;
+
 const Statistics = () => {
   const [openAlert, setOpenAlert] = useState<boolean>(false);
 
@@ -36,6 +38,20 @@ const Statistics = () => {
   const handleCloseViewAlert = () => {
     setOpenAlert(false);
   };
+
+  if(!isThereCurrentAlert) {
+    return (
+      <Typography
+        variant='h6'
+        component='p'
+        textAlign='center'
+        className='animate-in-bottom-short'
+        sx={{ animationDelay: '1500ms' }}
+      >
+        No hay ningún aviso activo en este momento.
+      </Typography>
+    )
+  }
 
   return (
     <>

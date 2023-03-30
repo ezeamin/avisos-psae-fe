@@ -10,8 +10,6 @@ import Statistics from '../components/Statistics/Statistics';
 
 import { customSwal } from '../helpers/customSwal';
 
-const isThereCurrentAlert = true;
-
 const Main = () => {
   const [text, setText] = useState<string | undefined>('');
 
@@ -52,7 +50,7 @@ const Main = () => {
       </Alert>
       <Alert
         severity='warning'
-        sx={{ mb: 2 }}
+        sx={{ mb: 2, animationDelay: '200ms' }}
         className='animate-in-bottom-short'
       >
         Realizar un nuevo aviso implicará eliminar el existente (de haberlo),
@@ -74,16 +72,12 @@ const Main = () => {
 
       <ButtonsSection saveAndAlert={saveAndAlert} clear={clear} />
 
-      {isThereCurrentAlert && (
-        <>
-          <Divider
-            sx={{ mt: 3, mb: 2, animationDelay: '1500ms' }}
-            className='animate-in-bottom-short'
-          />
+      <Divider
+        sx={{ mt: 3, mb: 2, animationDelay: '1500ms' }}
+        className='animate-in-bottom-short'
+      />
 
-          <Statistics />
-        </>
-      )}
+      <Statistics />
     </>
   );
 };
