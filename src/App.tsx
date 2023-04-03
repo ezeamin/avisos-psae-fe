@@ -15,7 +15,7 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Container className='content'>
+      <Container className='main-content'>
         <Header />
         <main>
           <Suspense fallback={null}>
